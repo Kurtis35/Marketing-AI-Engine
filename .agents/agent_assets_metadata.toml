@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "zx67v25gtP3y1nd0I6JSq"
+uri = "file://attached_assets/generated_images/hero-owner.png"
+type = "image"
+title = "hero business owner"
+
+[[generated]]
+id = "YQZE36xgcL23A_9HQgVqA"
+uri = "file://attached_assets/generated_images/google-maps-ranking.png"
+type = "image"
+title = "google maps ranking"
+
+[[generated]]
+id = "sKK_FLrQ_hesF1BVuVsBy"
+uri = "file://attached_assets/generated_images/digital-marketing-abstract.png"
+type = "image"
+title = "digital marketing abstract"
