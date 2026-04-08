@@ -1,0 +1,157 @@
+Improve and expand an existing high-converting website for MANA AI (Evermore Digital Solutions).
+
+⚠️ IMPORTANT: Do NOT redesign the entire website. Keep the current layout, structure, and visual style, but refine UI/UX, improve conversion, and add one additional page.
+
+The goal is to make the website feel more trustworthy, more premium, and more persuasive, while increasing conversions.
+
+🎯 GLOBAL IMPROVEMENTS (APPLY TO EXISTING PAGE)
+1. TRUST & SOCIAL PROOF (CRITICAL)
+Add visible trust signals directly under the hero section:
+“Trusted by local businesses in Cape Town”
+Star ratings (★★★★★ visual)
+Optional: “Helping businesses get more calls & customers”
+Ensure floating UI cards (reviews, WhatsApp messages) feel realistic and not generic.
+2. CTA OPTIMISATION
+
+Update all CTA buttons:
+
+“Get My Free Demo” → “Get My Free Demo Today”
+Add urgency microcopy under buttons:
+“Limited spots available this week”
+“48-hour setup available”
+Emphasize WhatsApp:
+Add “Chat on WhatsApp” as a primary or secondary CTA
+Include: “Prefer WhatsApp? Get a quick response instantly.”
+3. RESULTS SECTION (MORE BELIEVABLE)
+
+Refine metrics to feel realistic:
+
+“+40–150% more calls (depending on industry)”
+“Improved Google Maps visibility within weeks”
+“More calls, messages & customer trust”
+
+Add subtle visual graphs or before/after comparisons.
+
+4. HUMAN TOUCH (RELATABILITY)
+
+Add one short line:
+“We work with real local businesses — not big corporations — so everything is built to get you actual customers.”
+
+5. FINAL CTA IMPROVEMENT
+
+Update headline:
+“Let’s Get You More Calls, More Customers, and Real Growth in the Next 30 Days”
+
+💰 PRICING UPDATE (VERY IMPORTANT)
+
+Update all pricing across the site:
+
+30-Day Offer Section:
+Setup Only: R3,500
+Full 30-Day Package: R3,500 (highlighted as most popular OR adjust to R4,500 if needed for differentiation)
+Ongoing: R2,500/month
+
+Ensure the middle option is visually dominant.
+
+🧩 ADD NEW PAGE: “SERVICES & PORTFOLIO”
+
+Create a second page accessible from the navbar:
+
+🧠 PURPOSE:
+Showcase full capabilities
+Build authority
+Justify higher pricing
+🏆 SECTION 1: HEADER
+
+Headline:
+“Everything You Need to Grow Your Business Online”
+
+Subtext:
+“From websites to AI-powered marketing systems — we build everything you need to get more customers.”
+
+💼 SECTION 2: CORE SERVICES (GRID)
+
+Display cards for:
+
+Website Design (1–5 pages, modern UI)
+Google Business Profile Optimisation
+SEO Setup & Optimisation
+Social Media Setup & Content
+Google & Meta Ads Setup
+AI Chatbots & Automation
+Email Marketing Setup
+
+Each card should:
+
+Be clean and visual
+Include a short benefit-focused description
+📦 SECTION 3: PACKAGES (FROM PDF)
+
+Recreate package structure:
+
+Launch Package
+R6,500 once-off
+Includes: 1-page site, SEO, logo, social setup, Google profile
+Growth Package
+R9,800 setup
+R3,500/month
+Premium Package
+R18,500 setup
+R6,500/month
+Enterprise
+From R12,000/month
+
+Highlight:
+
+“Best for startups”
+“Best for growing businesses”
+“Best for scaling brands”
+🖼️ SECTION 4: PORTFOLIO
+
+Showcase previous work:
+
+Logos
+Website previews
+Business names (if available)
+
+Use:
+
+Clean grid layout
+Hover animations
+📲 SECTION 5: CTA
+
+“Want something like this for your business?”
+
+Buttons:
+
+Get Free Demo
+Chat on WhatsApp
+🎨 COLOUR PSYCHOLOGY (VERY IMPORTANT)
+
+Keep dark premium theme, but refine with conversion psychology:
+
+Deep black / dark navy background → authority, trust
+Electric blue → trust, professionalism, action (primary CTA color)
+Soft purple gradients → innovation, AI, premium feel
+Green accents (WhatsApp buttons) → action, communication, ease
+
+Ensure:
+
+CTA buttons contrast strongly against background
+Important elements glow slightly (draw attention)
+Avoid dull or flat colors — everything should feel alive and premium
+⚙️ UX IMPROVEMENTS
+Sticky navbar with CTA button always visible
+Smooth scroll animations
+Section transitions
+Clear spacing and readability
+Mobile-first optimisation
+🧠 TONE
+Clear, confident, human
+Speak like a consultant, not a marketer
+No jargon
+
+Example tone:
+“You focus on running your business. We make sure customers find you and call you.”
+
+The final result should feel like a premium, trustworthy, high-converting AI marketing agency that local businesses immediately trust and want to work with.
