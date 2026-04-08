@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MANA AI — Marketing Agency Website"
+version = "1.0.0"
+id = "artifacts/mana-ai"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22719
+
+[services.development]
+run = "pnpm --filter @workspace/mana-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mana-ai", "run", "build" ]
+publicDir = "artifacts/mana-ai/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22719"
+BASE_PATH = "/"

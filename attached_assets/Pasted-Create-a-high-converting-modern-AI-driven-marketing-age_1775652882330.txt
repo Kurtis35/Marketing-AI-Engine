@@ -1,0 +1,155 @@
+Create a high-converting, modern, AI-driven marketing agency website for MANA AI (Evermore Digital Solutions).
+
+The design should feel like a premium SaaS company such as Stripe or Meta Platforms — clean, fast, intelligent, and conversion-focused.
+
+The goal is to turn local South African business owners into leads within 30–60 seconds, especially service-based businesses (plumbers, transport, electricians, etc.).
+
+The website must be visually stunning, mobile-first, and built like a sales funnel disguised as a website.
+
+🏆 HERO SECTION (ABOVE THE FOLD — CRITICAL)
+
+Headline (localized + pain-driven):
+“If Customers Can’t Find You on Google in Cape Town, You’re Losing Money Every Day.”
+
+Subheadline:
+“You’re busy running your business. We make sure customers actually find you, trust you, and call you.”
+
+Trust Signals (directly under subheadline):
+
+“Helping local businesses get more calls & customers”
+Google review stars (visual)
+“Fast setup • Real results • No long-term contracts”
+
+Primary CTA:
+“Get My Free Demo”
+
+Secondary CTA:
+“See How It Works”
+
+Hero Visual:
+
+Short 30–45 second looping demo (Google Maps ranking improvement, incoming WhatsApp leads, before/after transformation)
+OR animated UI mockups showing:
+Google reviews increasing
+WhatsApp messages coming in
+
+Extras:
+
+Floating cards (realistic, not stock-looking)
+Subtle animated background (AI/data grid feel)
+⚡ SECTION 2: THE PROBLEM (RELATABLE + LOCAL)
+
+Show real frustrations:
+
+“People can’t find you on Google”
+“Competitors show up before you”
+“You’re relying only on word of mouth”
+“Your business doesn’t look trustworthy online”
+
+End with:
+👉 “This is where most local businesses lose customers every day.”
+
+🚀 SECTION 3: THE SOLUTION (30-DAY OFFER)
+
+Introduce clearly:
+
+“30-Day Online Presence Boost”
+
+Explain simply:
+
+We optimise your Google profile so you show up in Maps
+We improve or build your website
+We add trust elements so customers choose you
+We set up simple content so your business looks active
+
+Timeline Visual:
+Day 1–2 → Setup
+Day 3 → Live
+Day 30 → More visibility & calls
+
+💰 SECTION 4: PRICING (CLEAR + TRUSTED)
+Setup Only — R2,500
+⭐ Most Popular — R3,500 (Full 30-Day Support)
+Growth — R1,500/month
+
+Add:
+“Even 1–2 extra customers can cover this cost.”
+
+📈 SECTION 5: RESULTS (QUANTIFIED + VISUAL)
+
+Show realistic outcomes:
+
+“+40–150% increase in calls within 30 days (depending on industry)”
+“Improved visibility on Google Maps”
+“More customer trust and inquiries”
+
+Use:
+
+Graph visuals
+Before/after comparisons
+🧠 SECTION 6: WHY MANA AI (SIMPLIFIED VALUE)
+
+Replace tech jargon with benefits:
+
+AI That Works for You 24/7
+“Your business gets optimized continuously so customers can find you anytime.”
+More Calls, Not Just Clicks
+“We focus on real leads — calls, messages, and bookings.”
+Built for Local Businesses
+“Everything is designed for your area and your customers.”
+🧩 SECTION 7: SCALE OPTIONS (UPSELL PATH)
+
+Introduce higher packages:
+
+Launch Package (R6,500)
+Growth Package (R9,800 + monthly)
+Premium Package (R18,500)
+
+Position:
+👉 “For businesses ready to grow faster and dominate their market”
+
+📲 SECTION 8: FINAL CTA (STRONG CLOSE)
+
+Headline:
+“Let’s Get You More Customers in the Next 30 Days”
+
+CTA Buttons:
+
+“Get Free Demo”
+“Chat on WhatsApp”
+
+Add urgency:
+“Limited spots available this month”
+
+📋 LEAD FORM (IMPORTANT)
+
+Keep it simple:
+
+Name
+Phone / WhatsApp Number
+Business Type
+
+Prioritize WhatsApp over email.
+
+🎨 DESIGN STYLE
+Dark premium theme (black, deep purple, electric blue)
+Glassmorphism UI cards
+Smooth animations and micro-interactions
+Clean grid layout
+Premium SaaS feel
+⚙️ UX REQUIREMENTS
+Mobile-first design
+Sticky navigation
+Floating WhatsApp button
+CTA every 1–2 sections
+Fast loading
+🧠 TONE
+Clear, confident, conversational
+No jargon
+Speaks directly to busy business owners
+Feels like a consultant, not a marketer
+
+Example tone:
+“You’re busy running your business. We make sure customers find you and call you.”
+
+The final result should feel like a premium, trustworthy AI marketing company that immediately convinces local businesses to take action.
