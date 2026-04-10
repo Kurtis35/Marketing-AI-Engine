@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import heroOwnerImg from "@assets/generated_images/hero-owner.png";
 import googleMapsImg from "@assets/generated_images/google-maps-ranking.png";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(1)_1775804410966.jpeg";
 
 const WHATSAPP_URL = "https://wa.me/27760355295";
 
@@ -72,16 +73,18 @@ export default function Home() {
       {/* Background grid */}
       <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-100 z-0"></div>
       {/* Blue ambient glows */}
-      <div className="fixed top-[-15%] left-[-8%] w-[45%] h-[45%] rounded-full bg-blue-700/15 blur-[130px] pointer-events-none z-0"></div>
-      <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-800/10 blur-[140px] pointer-events-none z-0"></div>
-      {/* Orange accent glow — top right */}
-      <div className="fixed top-0 right-0 w-[30%] h-[30%] rounded-full bg-orange-500/8 blur-[100px] pointer-events-none z-0"></div>
+      <div className="fixed top-[-15%] left-[-8%] w-[45%] h-[45%] rounded-full bg-blue-700/15 blur-[130px] pointer-events-none z-0 blob-animate"></div>
+      <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-800/10 blur-[140px] pointer-events-none z-0 blob-animate-2"></div>
+      <div className="fixed top-0 right-0 w-[30%] h-[30%] rounded-full bg-orange-500/8 blur-[100px] pointer-events-none z-0 blob-animate-3"></div>
 
       {/* STICKY NAV */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/40" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollTo("hero")}>
+            <div className="flex-shrink-0 cursor-pointer flex items-center gap-2.5" onClick={() => scrollTo("hero")}>
+              <div className="logo-blend h-9 w-9 flex-shrink-0 rounded-sm overflow-hidden">
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
+              </div>
               <span className="text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
             </div>
             <div className="hidden md:flex items-center space-x-1">
@@ -97,7 +100,10 @@ export default function Home() {
                 Get Free Demo
               </Button>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex md:hidden items-center gap-3">
+              <div className="logo-blend h-8 w-8 flex-shrink-0 rounded-sm overflow-hidden">
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
+              </div>
               <button
                 data-testid="mobile-menu-toggle"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -130,14 +136,14 @@ export default function Home() {
 
               {/* Left: Content */}
               <motion.div initial="hidden" animate="show" variants={staggerContainer} className="max-w-2xl">
-                <motion.div variants={fadeIn} className="mb-6 inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-300">
-                  <Zap className="mr-2 h-4 w-4" />
+                <motion.div variants={fadeIn} className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-sm font-medium text-blue-300 badge-active">
+                  <span className="live-dot"></span>
                   Cape Town's #1 AI Marketing Agency
                 </motion.div>
 
                 <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 font-display leading-[1.08]">
                   If Customers Can't Find You on Google in Cape Town,{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">You're Losing Money Every Day.</span>
+                  <span className="animated-gradient-text">You're Losing Money Every Day.</span>
                 </motion.h1>
 
                 <motion.p variants={fadeIn} className="text-xl text-blue-200/70 mb-8 leading-relaxed">
@@ -150,7 +156,7 @@ export default function Home() {
                       data-testid="hero-primary-cta"
                       size="lg"
                       onClick={() => scrollTo("contact")}
-                      className="bg-primary hover:bg-orange-500 text-white font-bold text-lg px-8 py-6 rounded-xl glow-border shadow-xl transition-all hover:scale-105"
+                      className="bg-primary hover:bg-orange-500 text-white font-bold text-lg px-8 py-6 rounded-xl glow-border shadow-xl transition-all hover:scale-105 btn-shimmer"
                     >
                       Get My Free Demo Today
                     </Button>
@@ -460,7 +466,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="glass-card p-8 rounded-2xl text-center flex flex-col items-center justify-center border-blue-700/15 hover:border-blue-500/30 transition-all hover:-translate-y-2"
+                  className="glass-card p-8 rounded-2xl text-center flex flex-col items-center justify-center border-blue-700/15 stat-card card-hover-glow"
                 >
                   <div className="bg-blue-500/10 p-4 rounded-full mb-6">{stat.icon}</div>
                   <div className="text-4xl md:text-5xl font-black text-white mb-2 font-display">{stat.value}</div>
@@ -566,9 +572,9 @@ export default function Home() {
               {/* Most Popular */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="glass-card rounded-3xl p-8 border-2 border-orange-500/60 relative transform md:-translate-y-4 shadow-2xl shadow-orange-500/15"
+                className="gradient-border-animated glass-card rounded-3xl p-8 relative transform md:-translate-y-4 shadow-2xl shadow-orange-500/20"
               >
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold tracking-wider glow-border">MOST POPULAR</div>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold tracking-wider glow-border btn-shimmer">MOST POPULAR</div>
                 <h3 className="text-xl font-bold text-orange-400 mb-2 mt-4">Full 30-Day Support</h3>
                 <div className="text-4xl font-black text-white mb-1 font-display">R4,500</div>
                 <p className="text-blue-300/50 text-sm mb-6">complete 30-day management</p>

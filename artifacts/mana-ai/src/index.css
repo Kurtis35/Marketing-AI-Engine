@@ -65,18 +65,14 @@
 :root, .dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
-
   --opaque-button-border-intensity: 9;
-
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  /* Deep Navy Blue background */
   --background: 220 50% 6%;
   --foreground: 0 0% 98%;
-
-  /* Navy card surface */
   --border: 220 35% 18%;
+
   --card: 220 45% 10%;
   --card-foreground: 0 0% 98%;
   --card-border: 220 35% 20%;
@@ -94,19 +90,15 @@
   --popover-foreground: 0 0% 98%;
   --popover-border: 220 35% 20%;
 
-  /* Orange-Red for CTAs — the action color */
   --primary: 18 93% 55%;
   --primary-foreground: 0 0% 100%;
 
-  /* Deeper navy for section backgrounds */
   --secondary: 215 55% 17%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Muted navy grays */
   --muted: 220 35% 16%;
   --muted-foreground: 220 15% 65%;
 
-  /* Bright blue accent — brand/trust color */
   --accent: 215 85% 57%;
   --accent-foreground: 0 0% 100%;
 
@@ -115,62 +107,191 @@
 
   --input: 220 35% 20%;
   --ring: 18 93% 55%;
-
   --radius: .75rem;
 
-  --shadow-2xs: 0px 2px 4px 0px hsl(220 50% 3% / 0.4);
-  --shadow-xs: 0px 2px 6px 0px hsl(220 50% 3% / 0.4);
-  --shadow-sm: 0px 2px 6px 0px hsl(220 50% 3% / 0.4), 0px 1px 2px -1px hsl(220 50% 3% / 0.3);
-  --shadow: 0px 4px 8px 0px hsl(220 50% 3% / 0.4), 0px 2px 4px -1px hsl(220 50% 3% / 0.3);
-  --shadow-md: 0px 6px 12px 0px hsl(220 50% 3% / 0.4), 0px 3px 6px -1px hsl(220 50% 3% / 0.3);
-  --shadow-lg: 0px 8px 20px 0px hsl(220 50% 3% / 0.5), 0px 4px 8px -1px hsl(220 50% 3% / 0.3);
-  --shadow-xl: 0px 12px 30px 0px hsl(220 50% 3% / 0.5), 0px 8px 16px -1px hsl(220 50% 3% / 0.3);
-  --shadow-2xl: 0px 20px 50px 0px hsl(220 50% 3% / 0.6);
+  --shadow-lg: 0px 8px 24px 0px hsl(220 50% 3% / 0.5), 0px 4px 8px -1px hsl(220 50% 3% / 0.3);
+  --shadow-xl: 0px 12px 36px 0px hsl(220 50% 3% / 0.55), 0px 8px 16px -1px hsl(220 50% 3% / 0.3);
+  --shadow-2xl: 0px 24px 60px 0px hsl(220 50% 3% / 0.7);
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply font-sans antialiased bg-background text-foreground;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-  }
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 }
 
-/* Blue-tinted glassmorphism on navy backgrounds */
+/* ============================================
+   GLASSMORPHISM — Premium layered glass
+   ============================================ */
 .glass-card {
-  background: rgba(18, 28, 60, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(18, 28, 60, 0.52);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
   border: 1px solid rgba(100, 150, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(130, 170, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15),
+    0 8px 32px rgba(0, 0, 40, 0.45),
+    0 2px 8px rgba(0, 0, 40, 0.2);
 }
 
-/* Orange glow for CTA buttons */
-.glow-border {
-  box-shadow: 0 0 20px rgba(255, 105, 30, 0.45), 0 0 40px rgba(255, 105, 30, 0.15);
-}
-
-/* Blue glow for brand/trust elements */
-.glow-border-blue {
-  box-shadow: 0 0 15px rgba(60, 130, 255, 0.4);
-}
-
-/* MANA AI logo blue glow */
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
 .glow-text {
-  text-shadow: 0 0 24px rgba(60, 130, 255, 0.65);
+  text-shadow: 0 0 24px rgba(60, 130, 255, 0.7), 0 0 48px rgba(60, 130, 255, 0.3);
 }
 
-/* Orange glow text for CTA accent text */
 .glow-text-orange {
-  text-shadow: 0 0 20px rgba(255, 105, 30, 0.5);
+  text-shadow: 0 0 20px rgba(255, 105, 30, 0.55);
 }
 
-/* Subtle grid pattern — lighter on navy */
+/* Pulsing CTA glow */
+.glow-border {
+  animation: glow-pulse 2.8s ease-in-out infinite;
+}
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(255, 105, 30, 0.5), 0 0 36px rgba(255, 105, 30, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 105, 30, 0.75), 0 0 56px rgba(255, 105, 30, 0.3), 0 0 80px rgba(255, 105, 30, 0.1);
+  }
+}
+
+.glow-border-blue {
+  box-shadow: 0 0 12px rgba(60, 130, 255, 0.45), 0 0 24px rgba(60, 130, 255, 0.15);
+}
+
+/* ============================================
+   BUTTON SHIMMER SWEEP
+   ============================================ */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.14) 48%,
+    rgba(255, 255, 255, 0.06) 52%,
+    transparent 70%
+  );
+  transform: translateX(-150%);
+  animation: shimmer-sweep 2.6s ease-in-out infinite;
+}
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-150%); }
+  60%  { transform: translateX(250%); }
+  100% { transform: translateX(250%); }
+}
+
+/* ============================================
+   ANIMATED GRADIENT BORDER — for featured cards
+   ============================================ */
+.gradient-border-animated {
+  position: relative;
+  z-index: 0;
+}
+.gradient-border-animated::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    hsl(18, 93%, 60%),
+    hsl(215, 85%, 65%),
+    hsl(142, 71%, 50%),
+    hsl(18, 93%, 60%)
+  );
+  background-size: 300% 300%;
+  animation: gradient-border-rotate 3.5s linear infinite;
+  z-index: -1;
+}
+@keyframes gradient-border-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   ANIMATED GRADIENT TEXT
+   ============================================ */
+.animated-gradient-text {
+  background: linear-gradient(
+    120deg,
+    #f97316 0%,
+    #fbbf24 25%,
+    #f97316 50%,
+    #fb923c 75%,
+    #f97316 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-move 4s linear infinite;
+}
+@keyframes gradient-text-move {
+  0%   { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+/* ============================================
+   LIVE INDICATOR DOT
+   ============================================ */
+.live-dot {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+.live-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #22c55e;
+  opacity: 0.4;
+  animation: live-ping 1.5s ease-out infinite;
+}
+@keyframes live-ping {
+  0%   { transform: scale(1); opacity: 0.4; }
+  80%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ============================================
+   BLOB ANIMATIONS
+   ============================================ */
+.blob-animate {
+  animation: blob-drift 9s ease-in-out infinite;
+}
+.blob-animate-2 {
+  animation: blob-drift 12s ease-in-out infinite 3s;
+}
+.blob-animate-3 {
+  animation: blob-drift 8s ease-in-out infinite 1.5s;
+}
+@keyframes blob-drift {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  33%  { transform: scale(1.06) translate(1.5%, 1.5%); }
+  66%  { transform: scale(0.95) translate(-1%, 2%); }
+}
+
+/* ============================================
+   GRID PATTERN
+   ============================================ */
 .bg-grid-pattern {
   background-image:
     linear-gradient(to right, rgba(100, 150, 255, 0.04) 1px, transparent 1px),
@@ -178,11 +299,106 @@
   background-size: 44px 44px;
 }
 
-/* Image overlay helpers */
+/* ============================================
+   CARD HOVER GLOW
+   ============================================ */
+.card-hover-glow {
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+.card-hover-glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(100, 150, 255, 0.25),
+    0 12px 40px rgba(0, 0, 50, 0.5),
+    0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+/* ============================================
+   SECTION HEADING UNDERLINE
+   ============================================ */
+.section-heading-line {
+  position: relative;
+  display: inline-block;
+}
+.section-heading-line::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(18, 93%, 55%), transparent);
+  border-radius: 99px;
+}
+
+/* ============================================
+   IMAGE GRADIENT OVERLAYS
+   ============================================ */
 .img-gradient-overlay {
   background: linear-gradient(to right, hsl(220 50% 6%) 0%, transparent 60%);
 }
-
 .img-gradient-overlay-bottom {
   background: linear-gradient(to top, hsl(220 50% 6%) 0%, transparent 50%);
+}
+
+/* ============================================
+   NAV LOGO BLEND MODE
+   ============================================ */
+.logo-blend {
+  mix-blend-mode: screen;
+}
+
+/* ============================================
+   TIMELINE NODE PULSE
+   ============================================ */
+.timeline-node {
+  position: relative;
+}
+.timeline-node::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  animation: node-ring 2.5s ease-out infinite;
+}
+@keyframes node-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* ============================================
+   HERO STATS COUNTER CARD
+   ============================================ */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 20px 60px rgba(0, 0, 50, 0.5),
+    0 0 40px rgba(59, 130, 246, 0.06);
+}
+
+/* ============================================
+   BADGE PULSE — for live/active indicators
+   ============================================ */
+.badge-active {
+  animation: badge-glow 2s ease-in-out infinite;
+}
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  50%  { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12); }
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(6px); opacity: 0.5; }
+}
+.scroll-indicator {
+  animation: scroll-bounce 1.8s ease-in-out infinite;
 }

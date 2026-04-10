@@ -7,6 +7,7 @@ import {
   CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette, X
 } from "lucide-react";
 import abstractImg from "@assets/generated_images/digital-marketing-abstract.png";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(1)_1775804410966.jpeg";
 
 // Client portfolio images
 import hentiesImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_(1)_1775804410947.jpeg";
@@ -125,8 +126,11 @@ export default function Services() {
       <nav className="fixed top-0 w-full z-50 bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <button data-testid="services-logo" onClick={() => setLocation("/")} className="text-2xl font-bold tracking-tighter text-white glow-text font-display">
-              MANA <span className="text-blue-400">AI</span>
+            <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-2.5">
+              <div className="logo-blend h-9 w-9 flex-shrink-0 rounded-sm overflow-hidden">
+                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
+              </div>
+              <span className="text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
             </button>
             <div className="flex items-center gap-4">
               <button
@@ -163,7 +167,7 @@ export default function Services() {
               </motion.div>
               <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 font-display leading-tight max-w-4xl mx-auto">
                 Everything You Need to{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Grow Your Business Online</span>
+                <span className="animated-gradient-text">Grow Your Business Online</span>
               </motion.h1>
               <motion.p variants={fadeIn} className="text-xl text-blue-200/60 max-w-2xl mx-auto mb-10">
                 From websites to AI-powered marketing systems — we build everything you need to get more customers.
@@ -173,7 +177,7 @@ export default function Services() {
                   data-testid="services-header-cta"
                   size="lg"
                   onClick={() => setLocation("/")}
-                  className="bg-primary hover:bg-orange-500 text-white font-bold px-8 py-5 rounded-xl glow-border shadow-xl transition-all hover:scale-105"
+                  className="bg-primary hover:bg-orange-500 text-white font-bold px-8 py-5 rounded-xl glow-border shadow-xl transition-all hover:scale-105 btn-shimmer"
                 >
                   Get My Free Demo Today
                 </Button>
