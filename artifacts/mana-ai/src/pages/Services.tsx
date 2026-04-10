@@ -125,37 +125,39 @@ export default function Services() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-2.5">
-              <div className="logo-blend h-9 w-9 flex-shrink-0 rounded-sm overflow-hidden">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-2">
+              <div className="logo-blend h-8 w-8 md:h-9 md:w-9 flex-shrink-0 rounded-sm overflow-hidden">
                 <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
               </div>
-              <span className="text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
+              <span className="text-xl md:text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
             </button>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <button
                 data-testid="services-back-home"
                 onClick={() => setLocation("/")}
-                className="flex items-center gap-2 text-blue-300/60 hover:text-white transition-colors text-sm font-medium"
+                className="flex items-center gap-1.5 text-blue-300/60 hover:text-white transition-colors text-sm font-medium px-2 py-2"
               >
-                <ArrowLeft className="w-4 h-4" /> Back to Home
+                <ArrowLeft className="w-4 h-4 flex-shrink-0" />
+                <span className="hidden sm:inline">Back to Home</span>
               </button>
               <Button
                 data-testid="services-nav-cta"
                 onClick={() => setLocation("/")}
-                className="bg-primary hover:bg-orange-500 text-white font-semibold glow-border"
+                className="bg-primary hover:bg-orange-500 text-white font-semibold glow-border text-sm px-4 py-2 h-auto"
               >
-                Get Free Demo
+                <span className="hidden sm:inline">Get Free Demo</span>
+                <span className="sm:hidden">Free Demo</span>
               </Button>
             </div>
           </div>
         </div>
       </nav>
 
-      <main className="relative z-10 pt-20">
+      <main className="relative z-10 pt-16 md:pt-20">
 
         {/* HEADER */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-16 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img src={abstractImg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,50%,6%)]/60 via-[hsl(220,50%,6%)]/70 to-[hsl(220,50%,6%)]"></div>
@@ -225,7 +227,7 @@ export default function Services() {
         </section>
 
         {/* PACKAGES */}
-        <section className="py-24 relative">
+        <section className="py-14 md:py-24 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Choose Your Package</h2>
@@ -273,7 +275,7 @@ export default function Services() {
         </section>
 
         {/* CLIENT PORTFOLIO GALLERY */}
-        <section className="py-24 bg-blue-950/30 border-y border-blue-900/25">
+        <section className="py-14 md:py-24 bg-blue-950/30 border-y border-blue-900/25">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Businesses We've Worked With</h2>
@@ -323,7 +325,7 @@ export default function Services() {
         </section>
 
         {/* MANA AI BRAND GALLERY */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-14 md:py-24 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
               <div className="inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-300 mb-4">
@@ -402,7 +404,7 @@ export default function Services() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-14 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-950/60 via-background to-orange-950/20"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={staggerContainer} className="max-w-3xl mx-auto">

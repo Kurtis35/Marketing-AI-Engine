@@ -100,14 +100,12 @@ export default function Home() {
                 Get Free Demo
               </Button>
             </div>
-            <div className="-mr-2 flex md:hidden items-center gap-3">
-              <div className="logo-blend h-8 w-8 flex-shrink-0 rounded-sm overflow-hidden">
-                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
-              </div>
+            <div className="-mr-2 flex md:hidden">
               <button
                 data-testid="mobile-menu-toggle"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-blue-300 hover:text-white hover:bg-blue-900/30 focus:outline-none"
+                className="inline-flex items-center justify-center p-3 rounded-md text-blue-300 hover:text-white hover:bg-blue-900/30 focus:outline-none"
+                aria-label="Open menu"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -115,13 +113,15 @@ export default function Home() {
           </div>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-[hsl(220,50%,6%)]/98 backdrop-blur-lg border-b border-blue-900/40 absolute w-full">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <button onClick={() => scrollTo("problem")} className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">The Problem</button>
-              <button onClick={() => scrollTo("solution")} className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">How It Works</button>
-              <button onClick={() => scrollTo("pricing")} className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">Pricing</button>
-              <button onClick={() => { setLocation("/services"); setIsMobileMenuOpen(false); }} className="text-blue-200 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left">Services</button>
-              <Button onClick={() => scrollTo("contact")} className="w-full mt-4 bg-primary hover:bg-primary/90 glow-border">Get Free Demo</Button>
+          <div className="md:hidden bg-[hsl(220,50%,6%)]/98 backdrop-blur-lg border-b border-blue-900/40 absolute w-full shadow-2xl">
+            <div className="px-4 pt-3 pb-5 space-y-1">
+              <button onClick={() => { scrollTo("problem"); setIsMobileMenuOpen(false); }} className="text-blue-200 hover:text-white flex items-center px-4 py-4 rounded-xl text-base font-medium w-full text-left hover:bg-blue-900/30 transition-colors">The Problem</button>
+              <button onClick={() => { scrollTo("solution"); setIsMobileMenuOpen(false); }} className="text-blue-200 hover:text-white flex items-center px-4 py-4 rounded-xl text-base font-medium w-full text-left hover:bg-blue-900/30 transition-colors">How It Works</button>
+              <button onClick={() => { scrollTo("pricing"); setIsMobileMenuOpen(false); }} className="text-blue-200 hover:text-white flex items-center px-4 py-4 rounded-xl text-base font-medium w-full text-left hover:bg-blue-900/30 transition-colors">Pricing</button>
+              <button onClick={() => { setLocation("/services"); setIsMobileMenuOpen(false); }} className="text-blue-200 hover:text-white flex items-center px-4 py-4 rounded-xl text-base font-medium w-full text-left hover:bg-blue-900/30 transition-colors">Services</button>
+              <div className="pt-2 pb-1">
+                <Button onClick={() => { scrollTo("contact"); setIsMobileMenuOpen(false); }} className="w-full bg-primary hover:bg-orange-500 glow-border text-lg py-6 btn-shimmer">Get My Free Demo</Button>
+              </div>
             </div>
           </div>
         )}
@@ -141,7 +141,7 @@ export default function Home() {
                   Cape Town's #1 AI Marketing Agency
                 </motion.div>
 
-                <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 font-display leading-[1.08]">
+                <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 font-display leading-[1.08]">
                   If Customers Can't Find You on Google in Cape Town,{" "}
                   <span className="animated-gradient-text">You're Losing Money Every Day.</span>
                 </motion.h1>
@@ -286,7 +286,7 @@ export default function Home() {
         </section>
 
         {/* PROBLEM */}
-        <section id="problem" className="py-24 relative">
+        <section id="problem" className="py-14 md:py-24 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn}
@@ -333,7 +333,7 @@ export default function Home() {
         </section>
 
         {/* SOLUTION */}
-        <section id="solution" className="py-24 bg-blue-950/30 border-y border-blue-900/25 relative">
+        <section id="solution" className="py-14 md:py-24 bg-blue-950/30 border-y border-blue-900/25 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn}
@@ -443,7 +443,7 @@ export default function Home() {
         </section>
 
         {/* RESULTS */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-14 md:py-24 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn}
@@ -509,7 +509,7 @@ export default function Home() {
         </section>
 
         {/* WHY MANA AI */}
-        <section className="py-24 bg-blue-950/30 border-y border-blue-900/25 relative">
+        <section className="py-14 md:py-24 bg-blue-950/30 border-y border-blue-900/25 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn}
@@ -542,7 +542,7 @@ export default function Home() {
         </section>
 
         {/* PRICING */}
-        <section id="pricing" className="py-24 relative">
+        <section id="pricing" className="py-14 md:py-24 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn}
@@ -572,7 +572,7 @@ export default function Home() {
               {/* Most Popular */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                className="gradient-border-animated glass-card rounded-3xl p-8 relative transform md:-translate-y-4 shadow-2xl shadow-orange-500/20"
+                className="gradient-border-animated glass-card rounded-3xl p-8 relative mt-8 md:mt-0 transform md:-translate-y-4 shadow-2xl shadow-orange-500/20"
               >
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold tracking-wider glow-border btn-shimmer">MOST POPULAR</div>
                 <h3 className="text-xl font-bold text-orange-400 mb-2 mt-4">Full 30-Day Support</h3>
@@ -652,7 +652,7 @@ export default function Home() {
         </section>
 
         {/* FINAL CTA */}
-        <section id="contact" className="py-24 relative overflow-hidden">
+        <section id="contact" className="py-14 md:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-950/60 via-background to-orange-950/20"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto glass-card border border-orange-500/20 rounded-3xl p-8 md:p-12 shadow-2xl shadow-orange-500/5">
