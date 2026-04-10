@@ -1,14 +1,29 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
-  Globe, Search, Star, MessageSquare, BarChart2, Bot, Mail,
-  CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette
+  Globe, Search, MessageSquare, BarChart2, Bot, Mail,
+  CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette, X
 } from "lucide-react";
 import abstractImg from "@assets/generated_images/digital-marketing-abstract.png";
 
-const WHATSAPP_URL = "https://wa.me/27000000000";
+// Client portfolio images
+import hentiesImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_(1)_1775804410947.jpeg";
+import bizxcelImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_1775804410950.jpeg";
+import wosPackagingLogoImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.55_PM_(2)_1775804410952.jpeg";
+import wosApexImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.55_PM_(1)_1775804410954.jpeg";
+import warehouseImg1 from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_(2)_1775804410955.jpeg";
+import warehouseImg2 from "@assets/WhatsApp_Image_2026-04-09_at_2.16.55_PM_1775804410958.jpeg";
+
+// MANA AI brand images
+import manaBusinessCardImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_(1)_1775804410961.jpeg";
+import manaLogoWhiteImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_1775804410962.jpeg";
+import manaLogoLight2Img from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(2)_1775804410964.jpeg";
+import manaLogoDark1Img from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(1)_1775804410966.jpeg";
+import manaLogoDark2Img from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_1775804410968.jpeg";
+
+const WHATSAPP_URL = "https://wa.me/27760355295";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -49,23 +64,62 @@ const PACKAGES = [
   }
 ];
 
-const PORTFOLIO = [
-  { name: "Cape Plumbing Co.", industry: "Plumbing", result: "+120% calls in 30 days" },
-  { name: "Voltline Electrical", industry: "Electrical", result: "Ranked #1 in 3 areas" },
-  { name: "Swift Transport Solutions", industry: "Transport", result: "+80% more WhatsApp leads" },
-  { name: "BuildRight Contractors", industry: "Construction", result: "30 new reviews in 2 weeks" },
-  { name: "SparkFix Auto", industry: "Automotive", result: "Top 3 Google Maps ranking" },
-  { name: "CleanPro Services", industry: "Cleaning", result: "Tripled website traffic" }
+const CLIENT_GALLERY = [
+  { img: hentiesImg, name: "Henties Smoothies", industry: "Food & Beverage", desc: "Product branding & social media launch", objectFit: "cover" },
+  { img: bizxcelImg, name: "Bizxcel Hybrid", industry: "Business Solutions", desc: "Brand identity & digital presence", objectFit: "contain" },
+  { img: wosPackagingLogoImg, name: "WOS Pakmateriaal", industry: "Packaging", desc: "Logo design & online presence setup", objectFit: "contain" },
+  { img: wosApexImg, name: "WOS Apex", industry: "Branding & Clothing", desc: "Brand identity & digital marketing", objectFit: "contain" },
+  { img: warehouseImg1, name: "WOS Logistics", industry: "Warehousing", desc: "B2B marketing & lead generation", objectFit: "cover" },
+  { img: warehouseImg2, name: "WOS Operations", industry: "Logistics", desc: "SEO & Google Maps optimization", objectFit: "cover" },
+];
+
+const MANA_GALLERY = [
+  { img: manaBusinessCardImg, label: "Business Card", desc: "Official MANA AI brand card", bg: "bg-white/5" },
+  { img: manaLogoWhiteImg, label: "Primary Logo", desc: "Full logomark on white", bg: "bg-white/90" },
+  { img: manaLogoLight2Img, label: "Logo Variant", desc: "Compact logomark on white", bg: "bg-white/90" },
+  { img: manaLogoDark1Img, label: "Dark Logo", desc: "Full logomark on black", bg: "bg-black/80" },
+  { img: manaLogoDark2Img, label: "Dark Minimal", desc: "Minimal logomark on black", bg: "bg-black/80" },
 ];
 
 export default function Services() {
   const [, setLocation] = useLocation();
+  const [lightboxImg, setLightboxImg] = useState<{ src: string; label: string } | null>(null);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans overflow-x-hidden">
       <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-100 z-0"></div>
       <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-800/10 blur-[130px] pointer-events-none z-0"></div>
       <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[140px] pointer-events-none z-0"></div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxImg && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-6"
+            onClick={() => setLightboxImg(null)}
+          >
+            <button
+              className="absolute top-6 right-6 bg-white/10 hover:bg-white/20 p-2 rounded-full text-white transition-all"
+              onClick={() => setLightboxImg(null)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              src={lightboxImg.src}
+              alt={lightboxImg.label}
+              className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm font-medium">{lightboxImg.label}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/30">
@@ -96,19 +150,12 @@ export default function Services() {
 
       <main className="relative z-10 pt-20">
 
-        {/* HEADER with abstract image background */}
+        {/* HEADER */}
         <section className="py-24 relative overflow-hidden">
-          {/* Abstract background image */}
           <div className="absolute inset-0 z-0">
-            <img
-              src={abstractImg}
-              alt=""
-              aria-hidden="true"
-              className="w-full h-full object-cover opacity-20"
-            />
+            <img src={abstractImg} alt="" aria-hidden="true" className="w-full h-full object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,50%,6%)]/60 via-[hsl(220,50%,6%)]/70 to-[hsl(220,50%,6%)]"></div>
           </div>
-
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <motion.div initial="hidden" animate="show" variants={staggerContainer}>
               <motion.div variants={fadeIn} className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-300 mb-6">
@@ -150,7 +197,6 @@ export default function Services() {
               <h2 className="text-3xl md:text-4xl font-bold text-white font-display mb-4">Our Core Services</h2>
               <p className="text-blue-200/60 max-w-xl mx-auto">Each service is designed specifically for South African local businesses that want more customers.</p>
             </motion.div>
-
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={staggerContainer}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -181,7 +227,6 @@ export default function Services() {
               <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Choose Your Package</h2>
               <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">Transparent pricing built for South African businesses at every stage of growth.</p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {PACKAGES.map((pkg, i) => (
                 <motion.div
@@ -223,39 +268,131 @@ export default function Services() {
           </div>
         </section>
 
-        {/* PORTFOLIO */}
+        {/* CLIENT PORTFOLIO GALLERY */}
         <section className="py-24 bg-blue-950/30 border-y border-blue-900/25">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Businesses We've Helped</h2>
-              <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">Real local businesses getting real results across Cape Town and surrounds.</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Businesses We've Worked With</h2>
+              <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">Real brands, real work — from product launches to full digital marketing campaigns.</p>
             </motion.div>
 
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={staggerContainer}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto"
             >
-              {PORTFOLIO.map((item, i) => (
+              {CLIENT_GALLERY.map((item, i) => (
                 <motion.div
                   key={i}
                   data-testid={`portfolio-card-${i}`}
                   variants={fadeIn}
-                  className="glass-card rounded-2xl p-8 border border-blue-800/20 hover:border-orange-500/20 transition-all group hover:-translate-y-1 relative overflow-hidden"
+                  className="group relative rounded-2xl overflow-hidden border border-blue-800/20 hover:border-orange-500/30 transition-all cursor-pointer shadow-xl hover:-translate-y-1"
+                  onClick={() => setLightboxImg({ src: item.img, label: item.name })}
                 >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 blur-[40px]"></div>
-                  <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-900/60 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-blue-700/20">
-                      <Globe className="w-7 h-7 text-blue-400" />
+                  {/* Image */}
+                  <div className="aspect-[4/3] bg-[hsl(220,45%,10%)] flex items-center justify-center overflow-hidden">
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${item.objectFit === "contain" ? "object-contain p-6" : "object-cover"}`}
+                    />
+                  </div>
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,50%,5%)]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Info bar */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-xs text-orange-400 font-bold uppercase tracking-wider mb-1">{item.industry}</p>
+                    <h3 className="text-lg font-bold text-white">{item.name}</h3>
+                    <p className="text-blue-200/60 text-sm mt-1">{item.desc}</p>
+                  </div>
+                  {/* Static bottom label */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-[hsl(220,50%,6%)]/80 backdrop-blur-sm px-4 py-3 flex items-center justify-between group-hover:opacity-0 transition-opacity">
+                    <div>
+                      <p className="text-white font-semibold text-sm">{item.name}</p>
+                      <p className="text-blue-300/50 text-xs">{item.industry}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-1">{item.name}</h3>
-                    <p className="text-blue-300/50 text-sm mb-4">{item.industry}</p>
-                    <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-lg px-3 py-2 inline-flex">
-                      <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 flex-shrink-0" />
-                      <p className="text-green-400 font-semibold text-sm">{item.result}</p>
-                    </div>
+                    <div className="bg-blue-500/10 px-2 py-0.5 rounded text-blue-300 text-xs">View</div>
                   </div>
                 </motion.div>
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* MANA AI BRAND GALLERY */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeIn} className="text-center mb-16">
+              <div className="inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-300 mb-4">
+                About MANA AI
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Our Brand Identity</h2>
+              <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">
+                MANA AI by Evermore Digital Solutions — <span className="text-white italic">"Still Marketing but Different"</span>
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden" whileInView="show" viewport={{ once: true }} variants={staggerContainer}
+              className="max-w-5xl mx-auto"
+            >
+              {/* Business card — featured large */}
+              <motion.div
+                variants={fadeIn}
+                className="mb-5 rounded-2xl overflow-hidden border border-blue-800/20 hover:border-orange-500/30 transition-all cursor-pointer group shadow-2xl"
+                onClick={() => setLightboxImg({ src: manaBusinessCardImg, label: "MANA AI — Business Card" })}
+              >
+                <div className="aspect-[16/6] bg-[hsl(220,45%,10%)] flex items-center justify-center overflow-hidden">
+                  <img
+                    src={manaBusinessCardImg}
+                    alt="MANA AI Business Card — Jaun Witbooi, Founder"
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                    style={{ maxHeight: "240px" }}
+                  />
+                </div>
+                <div className="bg-[hsl(220,50%,8%)] px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div>
+                    <p className="text-white font-bold text-lg">Jaun Witbooi — Founder, MANA AI</p>
+                    <div className="flex flex-wrap gap-4 mt-2 text-sm text-blue-300/60">
+                      <span>📞 +27 76 035 5295</span>
+                      <span>✉ jaun@manaai.co.za</span>
+                      <span>🌐 www.manaai.co.za</span>
+                      <span>📸 @mana_ai_agency</span>
+                    </div>
+                  </div>
+                  <div className="bg-orange-500/10 border border-orange-500/20 text-orange-300 px-3 py-1 rounded-lg text-sm font-medium whitespace-nowrap">
+                    Business Card
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Logo variations — 4 in a grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {[
+                  { img: manaLogoWhiteImg, label: "Primary Logo", bg: "bg-white", textColor: "text-gray-700" },
+                  { img: manaLogoLight2Img, label: "Compact Logo", bg: "bg-gray-50", textColor: "text-gray-600" },
+                  { img: manaLogoDark1Img, label: "Dark Logomark", bg: "bg-black", textColor: "text-gray-400" },
+                  { img: manaLogoDark2Img, label: "Dark Minimal", bg: "bg-black", textColor: "text-gray-400" },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeIn}
+                    data-testid={`mana-brand-${i}`}
+                    className="rounded-2xl overflow-hidden border border-blue-800/20 hover:border-orange-500/30 transition-all cursor-pointer group shadow-lg"
+                    onClick={() => setLightboxImg({ src: item.img, label: `MANA AI — ${item.label}` })}
+                  >
+                    <div className={`aspect-square ${item.bg} flex items-center justify-center p-4 overflow-hidden`}>
+                      <img
+                        src={item.img}
+                        alt={`MANA AI ${item.label}`}
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="bg-[hsl(220,50%,8%)] px-3 py-2 text-center">
+                      <p className={`text-xs font-semibold text-blue-200/60`}>{item.label}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
@@ -299,14 +436,30 @@ export default function Services() {
       {/* FOOTER */}
       <footer className="bg-[hsl(220,55%,4%)] py-12 border-t border-blue-900/30 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <button onClick={() => setLocation("/")} className="text-2xl font-bold tracking-tighter text-white font-display">
-              MANA <span className="text-blue-400">AI</span>
-            </button>
-            <p className="text-blue-300/30 text-sm">© {new Date().getFullYear()} Evermore Digital Solutions. All rights reserved.</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-medium">
-              <MessageSquare className="w-4 h-4 mr-2" /> Chat on WhatsApp
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <button onClick={() => setLocation("/")} className="text-2xl font-bold tracking-tighter text-white font-display block mb-3">
+                MANA <span className="text-blue-400">AI</span>
+              </button>
+              <p className="text-blue-300/40 text-sm italic">"Still Marketing but Different"</p>
+              <p className="text-blue-300/40 text-sm mt-2">By Evermore Digital Solutions</p>
+            </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Contact Us</h4>
+              <div className="space-y-2 text-sm text-blue-300/50">
+                <p>📞 +27 76 035 5295</p>
+                <p>✉ jaun@manaai.co.za</p>
+                <p>🌐 www.manaai.co.za</p>
+                <p>📸 @mana_ai_agency</p>
+                <p>📍 Cape Town, South Africa</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-start md:items-end justify-between">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors font-medium">
+                <MessageSquare className="w-4 h-4 mr-2" /> Chat on WhatsApp
+              </a>
+              <p className="text-blue-300/30 text-sm mt-4">© {new Date().getFullYear()} Evermore Digital Solutions</p>
+            </div>
           </div>
         </div>
       </footer>

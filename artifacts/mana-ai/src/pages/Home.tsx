@@ -16,7 +16,7 @@ import {
 import heroOwnerImg from "@assets/generated_images/hero-owner.png";
 import googleMapsImg from "@assets/generated_images/google-maps-ranking.png";
 
-const WHATSAPP_URL = "https://wa.me/27000000000";
+const WHATSAPP_URL = "https://wa.me/27760355295";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -761,10 +761,15 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Contact</h4>
-              <a data-testid="footer-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors mb-2">
+              <a data-testid="footer-whatsapp" href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors mb-3">
                 <MessageSquare className="w-4 h-4 mr-2" /> Chat on WhatsApp
               </a>
-              <p className="text-blue-300/40 text-sm mt-4">Cape Town, South Africa</p>
+              <div className="space-y-1 text-sm text-blue-300/45">
+                <p>📞 +27 76 035 5295</p>
+                <p>✉ jaun@manaai.co.za</p>
+                <p>📸 @mana_ai_agency</p>
+                <p>📍 Cape Town, South Africa</p>
+              </div>
             </div>
           </div>
           <div className="border-t border-blue-900/30 pt-8 flex flex-col md:flex-row justify-between items-center">
