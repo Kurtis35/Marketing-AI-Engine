@@ -779,7 +779,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-blue-900/30 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-blue-300/30 text-sm">© {new Date().getFullYear()} Evermore Digital Solutions. All rights reserved.</p>
+            <p className="text-blue-300/30 text-sm">© {new Date().getFullYear()} MANA AI. All rights reserved.</p>
           </div>
         </div>
       </footer>

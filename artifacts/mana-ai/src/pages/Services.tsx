@@ -331,7 +331,7 @@ export default function Services() {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Our Brand Identity</h2>
               <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">
-                MANA AI by Evermore Digital Solutions — <span className="text-white italic">"Still Marketing but Different"</span>
+                MANA AI — <span className="text-white italic">"Still Marketing but Different"</span>
               </p>
             </motion.div>
 
@@ -446,7 +446,6 @@ export default function Services() {
                 MANA <span className="text-blue-400">AI</span>
               </button>
               <p className="text-blue-300/40 text-sm italic">"Still Marketing but Different"</p>
-              <p className="text-blue-300/40 text-sm mt-2">By Evermore Digital Solutions</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Contact Us</h4>
@@ -462,7 +461,7 @@ export default function Services() {
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors font-medium">
                 <MessageSquare className="w-4 h-4 mr-2" /> Chat on WhatsApp
               </a>
-              <p className="text-blue-300/30 text-sm mt-4">© {new Date().getFullYear()} Evermore Digital Solutions</p>
+              <p className="text-blue-300/30 text-sm mt-4">© {new Date().getFullYear()} MANA AI</p>
             </div>
           </div>
         </div>
