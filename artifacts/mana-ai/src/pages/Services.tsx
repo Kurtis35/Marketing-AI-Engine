@@ -7,7 +7,7 @@ import {
   CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette, X
 } from "lucide-react";
 import abstractImg from "@assets/generated_images/digital-marketing-abstract.png";
-import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM-removebg-preview_1776323782832.png";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_1776327116960.jpeg";
 
 // Client portfolio images
 import hentiesImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_(1)_1775804410947.jpeg";

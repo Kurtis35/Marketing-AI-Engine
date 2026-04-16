@@ -13,9 +13,9 @@ import {
   Menu, X, CheckCircle2, TrendingUp, Search, MessageSquare,
   Star, PhoneCall, Zap, MapPin, Globe, ShieldCheck, Clock, ArrowRight, Users
 } from "lucide-react";
-import heroOwnerImg from "@assets/generated_images/hero-owner.png";
+import heroOwnerImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(3)_1776327443687.jpeg";
 import googleMapsImg from "@assets/generated_images/google-maps-ranking.png";
-import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM-removebg-preview_1776323782832.png";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_1776327116960.jpeg";
 
 const WHATSAPP_URL = "https://wa.me/27760355295";
 
@@ -79,11 +79,11 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/40" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex-shrink-0 cursor-pointer flex items-center gap-2.5" onClick={() => scrollTo("hero")}>
-              <div className="logo-blend h-11 w-11 flex-shrink-0 overflow-hidden">
+            <div className="flex-shrink-0 cursor-pointer flex items-center gap-3" onClick={() => scrollTo("hero")}>
+              <div className="logo-blend h-14 w-14 flex-shrink-0 overflow-hidden">
                 <img src={logoMarkImg} alt="MANA AI" className="h-full w-full object-contain" draggable={false} />
               </div>
-              <span className="text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
+              <span className="text-3xl font-black tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
             </div>
             <div className="hidden md:flex items-center space-x-1">
               <button onClick={() => scrollTo("problem")} className="text-blue-200/70 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">The Problem</button>
@@ -130,10 +130,10 @@ export default function Home() {
               <motion.div initial="hidden" animate="show" variants={staggerContainer} className="max-w-2xl">
                 <motion.div variants={fadeIn} className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-sm font-medium text-blue-300 badge-active">
                   <span className="live-dot"></span>
-                  Cape Town's #1 AI Marketing Agency
+                  South Africa's #1 AI Marketing Agency
                 </motion.div>
                 <motion.h1 variants={fadeIn} className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 font-display leading-[1.08]">
-                  If Customers Can't Find You on Google in Cape Town,{" "}
+                  If Customers Can't Find You on Google,{" "}
                   <span className="animated-gradient-text">You're Losing Money Every Day.</span>
                 </motion.h1>
                 <motion.p variants={fadeIn} className="text-xl text-blue-200/70 mb-8 leading-relaxed">
@@ -174,7 +174,7 @@ export default function Home() {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star key={star} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                     ))}
-                    <span className="text-sm text-blue-200/60 ml-2">Trusted by local Cape Town businesses</span>
+                    <span className="text-sm text-blue-200/60 ml-2">Trusted by local South African businesses</span>
                   </div>
                   <div className="flex flex-wrap gap-3 text-xs text-blue-300/50 font-semibold uppercase tracking-wider">
                     <span className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-400" /> FAST SETUP</span>
@@ -226,7 +226,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">Ranking #1</p>
-                    <p className="text-xs text-blue-200/60">Electrician Cape Town</p>
+                    <p className="text-xs text-blue-200/60">Electrician Near Me</p>
                   </div>
                 </motion.div>
               </motion.div>
@@ -245,7 +245,7 @@ export default function Home() {
             >
               <div className="flex items-center gap-3">
                 <Users className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <span className="text-blue-100 font-medium">Trusted by local businesses in Cape Town</span>
+                <span className="text-blue-100 font-medium">Trusted by local businesses across South Africa</span>
               </div>
               <div className="hidden md:block w-px h-6 bg-blue-700/40"></div>
               <div className="flex items-center gap-2">
@@ -588,7 +588,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto glass-card border border-orange-500/20 rounded-3xl p-8 md:p-12 shadow-2xl shadow-orange-500/5">
               <div className="text-center mb-10">
                 <h2 className="text-3xl md:text-5xl font-bold text-white font-display mb-4">Ready to Start Getting More Calls?</h2>
-                <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">Book your free demo and see exactly how we help Cape Town businesses win more customers online.</p>
+                <p className="text-xl text-blue-200/60 max-w-2xl mx-auto">Book your free demo and see exactly how we help local businesses win more customers online.</p>
               </div>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -672,11 +672,11 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2.5 mb-4 cursor-pointer" onClick={() => scrollTo("hero")}>
-                <div className="logo-blend h-10 w-10 overflow-hidden">
+              <div className="flex items-center gap-3 mb-4 cursor-pointer" onClick={() => scrollTo("hero")}>
+                <div className="logo-blend h-14 w-14 overflow-hidden">
                   <img src={logoMarkImg} alt="MANA AI" className="h-full w-full object-contain" draggable={false} />
                 </div>
-                <span className="text-xl font-bold text-white font-display">MANA <span className="text-blue-400">AI</span></span>
+                <span className="text-2xl font-black text-white font-display">MANA <span className="text-blue-400">AI</span></span>
               </div>
               <p className="text-blue-300/50 text-sm leading-relaxed max-w-xs mb-4">
                 AI-driven digital marketing for local South African businesses. We help you get found, get trusted, and get customers.
@@ -698,7 +698,7 @@ export default function Home() {
                 <p>📞 +27 76 035 5295</p>
                 <p>✉️ jaun@manaai.co.za</p>
                 <p>🌐 www.manaai.co.za</p>
-                <p>📍 Cape Town, South Africa</p>
+                <p>📍 South Africa</p>
                 <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-medium pt-2">
                   <MessageSquare className="w-4 h-4" /> Chat on WhatsApp
                 </a>
@@ -707,7 +707,7 @@ export default function Home() {
           </div>
           <div className="border-t border-blue-900/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-blue-300/30 text-sm">© {new Date().getFullYear()} MANA AI. All rights reserved.</p>
-            <p className="text-blue-300/20 text-xs">Cape Town, South Africa · @mana_ai_agency</p>
+            <p className="text-blue-300/20 text-xs">South Africa · @mana_ai_agency</p>
           </div>
         </div>
       </footer>
