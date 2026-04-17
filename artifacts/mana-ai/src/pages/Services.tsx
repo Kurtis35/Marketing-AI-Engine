@@ -79,8 +79,8 @@ export default function Services() {
   const [lightboxImg, setLightboxImg] = useState<{ src: string; label: string } | null>(null);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
-      <div className="fixed inset-0 hero-grid-pattern opacity-100 pointer-events-none z-0" />
+    <div className="min-h-screen bg-white text-black font-sans overflow-x-hidden">
+      <div className="fixed inset-0 hero-grid-pattern-light opacity-100 pointer-events-none z-0" />
 
       {/* Lightbox */}
       <AnimatePresence>
@@ -89,11 +89,11 @@ export default function Services() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-6"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-white/95 backdrop-blur-md p-6"
             onClick={() => setLightboxImg(null)}
           >
             <button
-              className="absolute top-6 right-6 border border-white/12 hover:border-white/30 p-2.5 text-white/50 hover:text-white transition-all"
+              className="absolute top-6 right-6 border border-black/12 hover:border-black/30 p-2.5 text-black/50 hover:text-black transition-all"
               onClick={() => setLightboxImg(null)}
             >
               <X className="w-5 h-5" />
@@ -107,24 +107,24 @@ export default function Services() {
               className="max-w-full max-h-[85vh] object-contain shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
-            <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/30 text-[11px] font-bold uppercase tracking-[0.25em]">{lightboxImg.label}</p>
+            <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-black/35 text-[11px] font-bold uppercase tracking-[0.25em]">{lightboxImg.label}</p>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* NAV */}
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/96 backdrop-blur-xl border-b border-white/8">
+      <nav className="fixed top-0 w-full z-50 bg-white/96 backdrop-blur-xl border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-3">
-              <img src={logoImg} alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)", mixBlendMode: "screen" }} draggable={false} />
-              <span className="font-display font-bold text-[15px] tracking-wider text-white uppercase">MANA AI</span>
+              <img src={logoImg} alt="MANA AI" className="h-10 w-10 object-contain" draggable={false} />
+              <span className="font-display font-bold text-[15px] tracking-wider text-black uppercase">MANA AI</span>
             </button>
             <div className="flex items-center gap-4">
               <button
                 data-testid="services-back-home"
                 onClick={() => setLocation("/")}
-                className="flex items-center gap-2 text-white/35 hover:text-white transition-colors text-[11px] font-bold uppercase tracking-wider"
+                className="flex items-center gap-2 text-black/35 hover:text-black transition-colors text-[11px] font-bold uppercase tracking-wider"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span className="hidden sm:inline">Back to Home</span>
@@ -132,7 +132,7 @@ export default function Services() {
               <button
                 data-testid="services-nav-cta"
                 onClick={() => setLocation("/")}
-                className="bg-white text-black hover:bg-white/90 font-black text-[11px] px-5 py-2.5 uppercase tracking-wider transition-all"
+                className="bg-black text-white hover:bg-black/85 font-black text-[11px] px-5 py-2.5 uppercase tracking-wider transition-all"
               >
                 Free Growth Plan
               </button>
@@ -147,18 +147,18 @@ export default function Services() {
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial="hidden" animate="show" variants={stagger}>
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Full-Service Digital Marketing</motion.p>
-              <motion.h1 variants={fadeUp} className="font-display font-black text-[clamp(48px,7vw,110px)] leading-[0.9] tracking-tight uppercase text-white mb-10 max-w-5xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Full-Service Digital Marketing</motion.p>
+              <motion.h1 variants={fadeUp} className="font-display font-black text-[clamp(48px,7vw,110px)] leading-[0.9] tracking-tight uppercase text-black mb-10 max-w-5xl">
                 Everything you need<br />to grow online.
               </motion.h1>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl max-w-lg leading-relaxed font-light mb-12">
+              <motion.p variants={fadeUp} className="text-black/40 text-xl max-w-lg leading-relaxed font-light mb-12">
                 From websites to AI-powered marketing systems — we build everything you need to get more customers.
               </motion.p>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">
                 <button
                   data-testid="services-header-cta"
                   onClick={() => setLocation("/")}
-                  className="group bg-white text-black hover:bg-white/90 font-black text-[13px] px-8 py-5 uppercase tracking-wider transition-all flex items-center gap-3"
+                  className="group bg-black text-white hover:bg-black/85 font-black text-[13px] px-8 py-5 uppercase tracking-wider transition-all flex items-center gap-3"
                 >
                   Get My Free Demo Today
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -167,7 +167,7 @@ export default function Services() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2.5 text-green-400/70 hover:text-green-400 font-bold text-[13px] px-8 py-5 uppercase tracking-wider border border-green-500/15 hover:border-green-500/30 transition-all"
+                  className="inline-flex items-center gap-2.5 text-green-700/70 hover:text-green-700 font-bold text-[13px] px-8 py-5 uppercase tracking-wider border border-green-600/15 hover:border-green-600/30 transition-all"
                 >
                   <MessageSquare className="w-4 h-4" />
                   Chat on WhatsApp
@@ -178,15 +178,15 @@ export default function Services() {
         </section>
 
         {/* ── CORE SERVICES ─────────────────────────────────── */}
-        <section className="border-y border-white/6 bg-[#0d0d0d]">
+        <section className="border-y border-black/6 bg-[#f5f5f5]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 py-32">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="mb-20">
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Our Services</motion.p>
-              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-white max-w-2xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Our Services</motion.p>
+              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-black max-w-2xl">
                 Core services.
               </motion.h2>
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/6">
               {SERVICES.map((service, i) => (
                 <motion.div
                   key={i}
@@ -195,14 +195,14 @@ export default function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.06, duration: 0.7 }}
-                  className="bg-[#0d0d0d] p-8 group hover:bg-[#111] transition-colors"
+                  className="bg-[#f5f5f5] p-8 group hover:bg-[#eeeeee] transition-colors"
                 >
-                  <div className="w-10 h-10 border border-white/10 flex items-center justify-center text-white/40 mb-6 group-hover:border-white/20 group-hover:text-white/70 transition-all">
+                  <div className="w-10 h-10 border border-black/10 flex items-center justify-center text-black/40 mb-6 group-hover:border-black/20 group-hover:text-black/70 transition-all">
                     {service.icon}
                   </div>
-                  <div className="text-white/20 text-[9px] font-bold uppercase tracking-[0.2em] mb-3">{service.tag}</div>
-                  <h3 className="font-display font-bold text-base uppercase tracking-tight text-white mb-3">{service.title}</h3>
-                  <p className="text-white/30 text-sm leading-relaxed font-light">{service.desc}</p>
+                  <div className="text-black/22 text-[9px] font-bold uppercase tracking-[0.2em] mb-3">{service.tag}</div>
+                  <h3 className="font-display font-bold text-base uppercase tracking-tight text-black mb-3">{service.title}</h3>
+                  <p className="text-black/35 text-sm leading-relaxed font-light">{service.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -213,16 +213,16 @@ export default function Services() {
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="mb-20">
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Pricing</motion.p>
-              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-white max-w-2xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Pricing</motion.p>
+              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-black max-w-2xl">
                 Choose your package.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-md leading-relaxed font-light mt-6">
+              <motion.p variants={fadeUp} className="text-black/35 text-lg max-w-md leading-relaxed font-light mt-6">
                 Transparent pricing built for South African businesses at every stage of growth.
               </motion.p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/6 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black/6 max-w-5xl">
               {PACKAGES.map((pkg, i) => (
                 <motion.div
                   key={i}
@@ -230,22 +230,22 @@ export default function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className={`${pkg.popular ? "bg-white" : "bg-[#0a0a0a] hover:bg-[#111]"} p-10 flex flex-col transition-colors relative`}
+                  className={`${pkg.popular ? "bg-black" : "bg-white hover:bg-[#f7f7f7]"} p-10 flex flex-col transition-colors relative`}
                 >
                   {pkg.popular && (
                     <div className="absolute -top-3 left-8">
-                      <span className="bg-black text-white text-[9px] font-black px-3 py-1.5 uppercase tracking-widest">Most Popular</span>
+                      <span className="bg-white text-black text-[9px] font-black px-3 py-1.5 uppercase tracking-widest">Most Popular</span>
                     </div>
                   )}
-                  <p className={`text-[10px] font-bold uppercase tracking-[0.25em] mb-6 mt-2 ${pkg.popular ? "text-black/40" : "text-white/25"}`}>{pkg.tag}</p>
+                  <p className={`text-[10px] font-bold uppercase tracking-[0.25em] mb-6 mt-2 ${pkg.popular ? "text-white/45" : "text-black/25"}`}>{pkg.tag}</p>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className={`font-display font-black text-[52px] leading-none ${pkg.popular ? "text-black" : "text-white"}`}>{pkg.price}</span>
+                    <span className={`font-display font-black text-[52px] leading-none ${pkg.popular ? "text-white" : "text-black"}`}>{pkg.price}</span>
                   </div>
-                  <p className={`text-xs uppercase tracking-wider mb-10 ${pkg.popular ? "text-black/40" : "text-white/25"}`}>{pkg.billing}</p>
+                  <p className={`text-xs uppercase tracking-wider mb-10 ${pkg.popular ? "text-white/35" : "text-black/25"}`}>{pkg.billing}</p>
                   <ul className="space-y-4 flex-1 mb-10">
                     {pkg.items.map((item, j) => (
-                      <li key={j} className={`flex items-start gap-3 text-xs uppercase tracking-wide font-medium ${pkg.popular ? "text-black/60" : "text-white/40"}`}>
-                        <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pkg.popular ? "text-black/40" : "text-white/25"}`} />
+                      <li key={j} className={`flex items-start gap-3 text-xs uppercase tracking-wide font-medium ${pkg.popular ? "text-white/65" : "text-black/45"}`}>
+                        <CheckCircle2 className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pkg.popular ? "text-white/40" : "text-black/25"}`} />
                         {item}
                       </li>
                     ))}
@@ -254,8 +254,8 @@ export default function Services() {
                     onClick={() => setLocation("/")}
                     className={`w-full font-black text-[11px] py-4 uppercase tracking-widest transition-all ${
                       pkg.popular
-                        ? "bg-black text-white hover:bg-black/80"
-                        : "border border-white/12 text-white/50 hover:border-white/25 hover:text-white"
+                        ? "bg-white text-black hover:bg-white/90"
+                        : "border border-black/12 text-black/50 hover:border-black/25 hover:text-black"
                     }`}
                   >
                     Get Started
@@ -267,19 +267,19 @@ export default function Services() {
         </section>
 
         {/* ── CLIENT PORTFOLIO ──────────────────────────────── */}
-        <section className="border-y border-white/6 bg-[#0d0d0d] py-32">
+        <section className="border-y border-black/6 bg-[#f5f5f5] py-32">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="mb-20">
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Our Work</motion.p>
-              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-white max-w-2xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Our Work</motion.p>
+              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-black max-w-2xl">
                 Businesses we've<br />worked with.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-md leading-relaxed font-light mt-6">
+              <motion.p variants={fadeUp} className="text-black/35 text-lg max-w-md leading-relaxed font-light mt-6">
                 Real brands, real work — from product launches to full digital marketing campaigns.
               </motion.p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/6">
               {CLIENT_GALLERY.map((client, i) => (
                 <motion.button
                   key={i}
@@ -289,20 +289,20 @@ export default function Services() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07, duration: 0.7 }}
-                  className="bg-[#0d0d0d] overflow-hidden text-left group hover:bg-[#111] transition-colors"
+                  className="bg-[#f5f5f5] overflow-hidden text-left group hover:bg-[#eeeeee] transition-colors"
                 >
-                  <div className="aspect-[4/3] overflow-hidden bg-black">
+                  <div className="aspect-[4/3] overflow-hidden bg-[#e8e8e8]">
                     <img
                       src={client.img}
                       alt={client.name}
                       className={`w-full h-full object-${client.fit} group-hover:scale-105 transition-transform duration-700`}
                     />
                   </div>
-                  <div className="p-6 border-t border-white/5">
-                    <div className="text-white/20 text-[9px] font-bold uppercase tracking-[0.2em] mb-2">{client.industry}</div>
-                    <h3 className="font-display font-bold text-base uppercase tracking-tight text-white mb-1">{client.name}</h3>
-                    <p className="text-white/35 text-xs font-light leading-relaxed">{client.desc}</p>
-                    <div className="mt-4 flex items-center gap-2 text-white/20 text-[10px] font-bold uppercase tracking-wider group-hover:text-white/50 transition-colors">
+                  <div className="p-6 border-t border-black/5">
+                    <div className="text-black/22 text-[9px] font-bold uppercase tracking-[0.2em] mb-2">{client.industry}</div>
+                    <h3 className="font-display font-bold text-base uppercase tracking-tight text-black mb-1">{client.name}</h3>
+                    <p className="text-black/35 text-xs font-light leading-relaxed">{client.desc}</p>
+                    <div className="mt-4 flex items-center gap-2 text-black/22 text-[10px] font-bold uppercase tracking-wider group-hover:text-black/50 transition-colors">
                       View Project <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -316,16 +316,16 @@ export default function Services() {
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger} className="mb-20">
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Brand Identity</motion.p>
-              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-white max-w-2xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">— Brand Identity</motion.p>
+              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(36px,5vw,72px)] leading-[0.95] tracking-tight uppercase text-black max-w-2xl">
                 Our brand.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-md leading-relaxed font-light mt-6 italic">
+              <motion.p variants={fadeUp} className="text-black/35 text-lg max-w-md leading-relaxed font-light mt-6 italic">
                 "Still Marketing, But Different"
               </motion.p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-black/6">
               {MANA_GALLERY.map((item, i) => (
                 <motion.button
                   key={i}
@@ -345,9 +345,9 @@ export default function Services() {
                       className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-4 border-t border-white/5 bg-[#0d0d0d]">
-                    <h3 className="font-display font-bold text-xs uppercase tracking-tight text-white mb-0.5">{item.label}</h3>
-                    <p className="text-white/25 text-[10px] font-light">{item.desc}</p>
+                  <div className="p-4 border-t border-black/8 bg-[#f5f5f5]">
+                    <h3 className="font-display font-bold text-xs uppercase tracking-tight text-black mb-0.5">{item.label}</h3>
+                    <p className="text-black/30 text-[10px] font-light">{item.desc}</p>
                   </div>
                 </motion.button>
               ))}
@@ -356,18 +356,18 @@ export default function Services() {
         </section>
 
         {/* ── CTA ───────────────────────────────────────────── */}
-        <section className="py-32 border-t border-white/6 bg-[#0d0d0d]">
+        <section className="py-32 border-t border-black/6 bg-[#f5f5f5]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}>
-              <motion.p variants={fadeUp} className="text-white/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-8">— Ready to grow?</motion.p>
-              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(40px,6vw,90px)] leading-[0.9] tracking-tight uppercase text-white mb-12 max-w-4xl">
+              <motion.p variants={fadeUp} className="text-black/25 text-[11px] font-bold uppercase tracking-[0.25em] mb-8">— Ready to grow?</motion.p>
+              <motion.h2 variants={fadeUp} className="font-display font-black text-[clamp(40px,6vw,90px)] leading-[0.9] tracking-tight uppercase text-black mb-12 max-w-4xl">
                 Ready to get more customers?
               </motion.h2>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">
                 <button
                   data-testid="services-cta"
                   onClick={() => setLocation("/")}
-                  className="group bg-white text-black hover:bg-white/90 font-black text-[13px] px-10 py-5 uppercase tracking-wider transition-all flex items-center gap-3"
+                  className="group bg-black text-white hover:bg-black/85 font-black text-[13px] px-10 py-5 uppercase tracking-wider transition-all flex items-center gap-3"
                 >
                   Get My Free Demo Today
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -376,7 +376,7 @@ export default function Services() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2.5 text-green-400/70 hover:text-green-400 font-bold text-[13px] px-10 py-5 uppercase tracking-wider border border-green-500/15 hover:border-green-500/30 transition-all"
+                  className="inline-flex items-center gap-2.5 text-green-700/70 hover:text-green-700 font-bold text-[13px] px-10 py-5 uppercase tracking-wider border border-green-600/15 hover:border-green-600/30 transition-all"
                 >
                   <MessageSquare className="w-4 h-4" />
                   Chat on WhatsApp
