@@ -7,7 +7,7 @@ import {
   CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette, X
 } from "lucide-react";
 import abstractImg from "@assets/generated_images/digital-marketing-abstract.png";
-import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_1776327116960.jpeg";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-16_at_10.50.01_PM_1776410025142.jpeg";
 
 // Client portfolio images
 import hentiesImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_(1)_1775804410947.jpeg";
@@ -121,11 +121,10 @@ export default function Services() {
       <nav className="fixed top-0 w-full z-50 bg-[hsl(220,50%,6%)]/90 backdrop-blur-md border-b border-blue-900/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-2">
-              <div className="logo-blend h-10 w-10 md:h-11 md:w-11 flex-shrink-0 rounded-sm overflow-hidden">
-                <img src={logoMarkImg} alt="" className="h-full w-full object-contain" draggable={false} />
+            <button data-testid="services-logo" onClick={() => setLocation("/")}>
+              <div className="h-11 w-11 flex-shrink-0 rounded-sm overflow-hidden" style={{ mixBlendMode: "screen", filter: "invert(1)" }}>
+                <img src={logoMarkImg} alt="MANA AI" className="h-full w-full object-contain" draggable={false} />
               </div>
-              <span className="text-xl md:text-2xl font-bold tracking-tighter text-white glow-text font-display">MANA <span className="text-blue-400">AI</span></span>
             </button>
             <div className="flex items-center gap-2 md:gap-4">
               <button data-testid="services-back-home" onClick={() => setLocation("/")} className="flex items-center gap-1.5 text-blue-300/60 hover:text-white transition-colors text-sm font-medium px-2 py-2">

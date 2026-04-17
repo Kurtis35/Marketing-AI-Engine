@@ -15,7 +15,7 @@ import {
   BarChart3, Layers, Bot, Target, Rocket, Gauge
 } from "lucide-react";
 import heroOwnerImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(3)_1776327443687.jpeg";
-import logoMarkImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.49_PM_1776327116960.jpeg";
+import logoMarkImg from "@assets/WhatsApp_Image_2026-04-16_at_10.50.01_PM_1776410025142.jpeg";
 
 const WHATSAPP_URL = "https://wa.me/27760355295";
 
@@ -83,11 +83,10 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "bg-[#080c14]/95 backdrop-blur-xl border-b border-white/5" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[72px]">
-            <div className="flex-shrink-0 cursor-pointer flex items-center gap-3" onClick={() => scrollTo("hero")}>
-              <div className="h-14 w-14 flex-shrink-0 overflow-hidden" style={{ mixBlendMode: "screen" }}>
+            <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollTo("hero")}>
+              <div className="h-12 w-12 flex-shrink-0 overflow-hidden" style={{ mixBlendMode: "screen", filter: "invert(1)" }}>
                 <img src={logoMarkImg} alt="MANA AI" className="h-full w-full object-contain" draggable={false} />
               </div>
-              <span className="text-[1.6rem] font-black tracking-tighter text-white font-display">MANA <span className="text-blue-400">AI</span></span>
             </div>
             <div className="hidden md:flex items-center gap-1">
               {[["What We Do", "services"], ["Process", "process"], ["Results", "results"], ["Pricing", "pricing"]].map(([label, id]) => (
@@ -135,9 +134,9 @@ export default function Home() {
 
               {/* Left copy */}
               <motion.div initial="hidden" animate="show" variants={stagger} className="relative">
-                <motion.div variants={fadeUp} className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/60 backdrop-blur-sm">
+                <motion.div variants={fadeUp} className="mb-8 flex items-center gap-3">
                   <span className="live-dot" />
-                  AI-Powered Digital Growth Agency
+                  <span className="text-white/40 text-xs font-semibold uppercase tracking-[0.2em]">AI-Powered Digital Growth Agency</span>
                 </motion.div>
 
                 <motion.h1 variants={fadeUp} className="text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] font-black tracking-tight leading-[1.04] mb-8 font-display">
@@ -245,22 +244,22 @@ export default function Home() {
         </section>
 
         {/* ── TRUST STRIP ────────────────────────────────── */}
-        <section className="py-8 border-y border-white/5 bg-white/[0.02]">
+        <section className="py-6 border-y border-white/[0.06] bg-white/[0.015]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-14 text-center"
+              className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
             >
               {[
-                { icon: <ShieldCheck className="w-4 h-4 text-green-400" />, label: "No long-term contracts" },
-                { icon: <Zap className="w-4 h-4 text-yellow-400" />, label: "48-hour launch" },
-                { icon: <BarChart3 className="w-4 h-4 text-blue-400" />, label: "Results-guaranteed approach" },
-                { icon: <Target className="w-4 h-4 text-orange-400" />, label: "Conversion-focused systems" },
+                { label: "No long-term contracts" },
+                { label: "48-hour launch" },
+                { label: "Results-guaranteed approach" },
+                { label: "Conversion-focused systems" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2.5 text-white/40 text-sm font-medium">
-                  {item.icon}
+                <div key={i} className="flex items-center gap-2.5 text-white/30 text-xs font-semibold uppercase tracking-widest">
+                  <span className="w-1 h-1 rounded-full bg-orange-500/60 flex-shrink-0" />
                   {item.label}
                 </div>
               ))}
@@ -275,11 +274,14 @@ export default function Home() {
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
               className="mb-20"
             >
-              <motion.p variants={fadeUp} className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-5">What We Do</motion.p>
-              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6 font-display max-w-3xl">
-                Everything your business needs to dominate online.
+              <motion.div variants={fadeUp} className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">What We Do</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-[56px] font-black tracking-tight leading-[1.06] mb-6 font-display max-w-3xl">
+                Everything your business needs<br className="hidden md:block" /> to dominate online.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl max-w-2xl leading-relaxed">
+              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-xl leading-relaxed">
                 Three powerful systems. One unified strategy. Built to make your competitors irrelevant.
               </motion.p>
             </motion.div>
@@ -351,11 +353,14 @@ export default function Home() {
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
               className="mb-20"
             >
-              <motion.p variants={fadeUp} className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-5">How It Works</motion.p>
-              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6 font-display max-w-2xl">
+              <motion.div variants={fadeUp} className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">How It Works</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-[56px] font-black tracking-tight leading-[1.06] mb-6 font-display max-w-2xl">
                 From zero to results in four clear steps.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl max-w-xl leading-relaxed">
+              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-xl leading-relaxed">
                 We make the process simple, transparent, and fast. Here's exactly what happens when you work with us.
               </motion.p>
             </motion.div>
@@ -397,11 +402,14 @@ export default function Home() {
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
               className="mb-20"
             >
-              <motion.p variants={fadeUp} className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-5">Results</motion.p>
-              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6 font-display max-w-2xl">
+              <motion.div variants={fadeUp} className="flex items-center gap-3 mb-6">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">Results</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-[56px] font-black tracking-tight leading-[1.06] mb-6 font-display max-w-2xl">
                 Numbers that speak for themselves.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl max-w-xl leading-relaxed">
+              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-xl leading-relaxed">
                 We measure success by revenue generated, not vanity metrics.
               </motion.p>
             </motion.div>
@@ -490,11 +498,15 @@ export default function Home() {
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
               className="mb-20 text-center"
             >
-              <motion.p variants={fadeUp} className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-5">Pricing</motion.p>
-              <motion.h2 variants={fadeUp} className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6 font-display">
+              <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-6">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">Pricing</span>
+                <span className="h-px w-8 bg-orange-500/60" />
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-[56px] font-black tracking-tight leading-[1.06] mb-6 font-display">
                 Simple. Transparent. No BS.
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl max-w-xl mx-auto leading-relaxed">
+              <motion.p variants={fadeUp} className="text-white/35 text-lg max-w-xl mx-auto leading-relaxed">
                 One new client covers the cost. Most businesses see ROI within the first week.
               </motion.p>
             </motion.div>
@@ -645,12 +657,16 @@ export default function Home() {
             <motion.div
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
             >
-              <motion.p variants={fadeUp} className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-6">Ready to grow?</motion.p>
-              <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-black tracking-tight leading-[1.04] mb-8 font-display">
+              <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-8">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">Ready to grow?</span>
+                <span className="h-px w-8 bg-orange-500/60" />
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-5xl md:text-[72px] font-black tracking-tight leading-[1.04] mb-8 font-display">
                 Stop losing clients online.<br />
                 <span className="animated-gradient-text">Let's build your growth system.</span>
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-xl mb-12 max-w-xl mx-auto leading-relaxed">
+              <motion.p variants={fadeUp} className="text-white/35 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
                 Book a free 30-minute strategy call. We'll show you exactly how to outperform your competitors online — no commitment, no fluff.
               </motion.p>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -682,8 +698,13 @@ export default function Home() {
               initial="hidden" whileInView="show" viewport={{ once: true }} variants={stagger}
               className="text-center mb-12"
             >
-              <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-black tracking-tight mb-4 font-display">Get Your Free Growth Plan</motion.h2>
-              <motion.p variants={fadeUp} className="text-white/40 text-lg">Fill in your details and we'll reach out within 24 hours to build your personalised strategy.</motion.p>
+              <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-5">
+                <span className="h-px w-8 bg-orange-500/60" />
+                <span className="text-orange-400 text-xs font-bold uppercase tracking-[0.2em]">Get in Touch</span>
+                <span className="h-px w-8 bg-orange-500/60" />
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-3xl md:text-[48px] font-black tracking-tight leading-tight mb-4 font-display">Get Your Free Growth Plan</motion.h2>
+              <motion.p variants={fadeUp} className="text-white/35 text-lg">Fill in your details and we'll reach out within 24 hours to build your personalised strategy.</motion.p>
             </motion.div>
 
             <motion.div
@@ -769,11 +790,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-14">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-5 cursor-pointer" onClick={() => scrollTo("hero")}>
-                <div className="h-14 w-14 overflow-hidden" style={{ mixBlendMode: "screen" }}>
+              <div className="mb-5 cursor-pointer inline-block" onClick={() => scrollTo("hero")}>
+                <div className="h-14 w-14 overflow-hidden" style={{ mixBlendMode: "screen", filter: "invert(1)" }}>
                   <img src={logoMarkImg} alt="MANA AI" className="h-full w-full object-contain" draggable={false} />
                 </div>
-                <span className="text-2xl font-black text-white font-display">MANA <span className="text-blue-400">AI</span></span>
               </div>
               <p className="text-white/30 text-sm leading-relaxed max-w-xs mb-5">
                 An AI-powered digital growth agency that builds high-converting online systems for businesses.
