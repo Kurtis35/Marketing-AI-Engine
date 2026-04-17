@@ -1,0 +1,109 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "Gotham",
+      "role": "heading"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    },
+    {
+      "family": "Times New Roman",
+      "role": "unknown"
+    }
+  ],
+  "colors": {
+    "primary": "#13AFF0",
+    "secondary": "#CB2027",
+    "accent": "#597BA5",
+    "background": "#171717",
+    "textPrimary": "#171717",
+    "link": "#597BA5"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Arial",
+      "heading": "Gotham"
+    },
+    "fontStacks": {
+      "heading": [
+        "Gotham"
+      ],
+      "body": [
+        "Gotham"
+      ],
+      "paragraph": [
+        "Gotham"
+      ]
+    },
+    "fontSizes": {
+      "h1": "74px",
+      "h2": "400px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {
+    "input": {
+      "background": "transparent",
+      "textColor": "#FFFFFF",
+      "borderColor": "#FFFFFF",
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.png",
+    "favicon": "https://dmncreative.com/wp-content/uploads/2019/12/cropped-dmn_favicon-150x150.png",
+    "ogImage": "https://dmncreative.com/wp-content/uploads/2023/10/WEB-DESIGN-DEVELOPMENT.png",
+    "logoHref": "https://dmncreative.com/",
+    "logoAlt": "DMN Creative"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and the alt text matches the brand name 'DMN Creative'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "businesses looking for digital marketing services"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0.9,
+    "overall": 0.45
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and the alt text matches the brand name 'DMN Creative'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": false,
+      "llmSucceeded": false
+    }
+  }
+}

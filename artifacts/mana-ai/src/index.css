@@ -299,6 +299,49 @@
   background-size: 44px 44px;
 }
 
+/* Hero grid — subtle pure white lines */
+.hero-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Hero gradient text — monochrome silver/white shimmer */
+.hero-gradient-text {
+  background: linear-gradient(
+    105deg,
+    #888 0%,
+    #fff 35%,
+    #bbb 55%,
+    #fff 75%,
+    #888 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hero-text-shimmer 5s linear infinite;
+}
+@keyframes hero-text-shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 250% center; }
+}
+
+/* Marquee */
+.marquee-outer {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  animation: marquee-scroll 35s linear infinite;
+  width: max-content;
+}
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
 /* ============================================
    CARD HOVER GLOW
    ============================================ */
