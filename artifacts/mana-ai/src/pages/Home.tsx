@@ -93,7 +93,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollTo("hero")}>
-              <img src={logoImg} alt="MANA AI" className="h-14 w-14 object-contain" draggable={false} />
+              <img src={logoImg} alt="MANA AI" className="h-20 w-20 object-contain" draggable={false} />
             </div>
             <div className="hidden md:flex items-center gap-1">
               {[["Services", "services"], ["Process", "process"], ["Results", "results"], ["Pricing", "pricing"]].map(([label, id]) => (
@@ -678,7 +678,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="mb-6 cursor-pointer" onClick={() => scrollTo("hero")}>
-                <img src={logoImg} alt="MANA AI" className="h-14 w-14 object-contain opacity-80" draggable={false} />
+                <img src={logoImg} alt="MANA AI" className="h-20 w-20 object-contain opacity-80" draggable={false} />
               </div>
               <p className="text-black/28 text-sm leading-relaxed max-w-xs mb-5 font-light">
                 An AI-powered digital growth agency that builds high-converting online systems for businesses across South Africa.

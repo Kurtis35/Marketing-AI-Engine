@@ -117,7 +117,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <button data-testid="services-logo" onClick={() => setLocation("/")}>
-              <img src={logoImg} alt="MANA AI" className="h-14 w-14 object-contain" draggable={false} />
+              <img src={logoImg} alt="MANA AI" className="h-20 w-20 object-contain" draggable={false} />
             </button>
             <div className="flex items-center gap-4">
               <button
