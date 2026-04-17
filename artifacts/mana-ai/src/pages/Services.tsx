@@ -115,9 +115,9 @@ export default function Services() {
       {/* NAV */}
       <nav className="fixed top-0 w-full z-50 bg-white/96 backdrop-blur-xl border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex items-center justify-between h-[68px]">
+          <div className="flex items-center justify-between h-[100px]">
             <button data-testid="services-logo" onClick={() => setLocation("/")}>
-              <img src={logoImg} alt="MANA AI" className="h-20 w-20 object-contain" draggable={false} />
+              <img src={logoImg} alt="MANA AI" className="h-32 w-32 object-contain" draggable={false} />
             </button>
             <div className="flex items-center gap-4">
               <button
