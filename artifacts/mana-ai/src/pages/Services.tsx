@@ -116,7 +116,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-3">
-              <img src="/mana-logo-mark.png" alt="MANA AI" className="h-10 w-10 object-contain" draggable={false} />
+              <img src="/mana-logo-mark.png" alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)" }} draggable={false} />
               <span className="font-display font-bold text-[15px] tracking-wider text-white uppercase">MANA AI</span>
             </button>
             <div className="flex items-center gap-4">
