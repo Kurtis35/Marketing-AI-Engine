@@ -6,6 +6,7 @@ import {
   CheckCircle2, Zap, ArrowLeft, ArrowRight, Monitor, Palette, X
 } from "lucide-react";
 
+import logoImg from "@assets/WhatsApp_Image_2026-04-16_at_10.50.01_PM_1776429915147.jpeg";
 import hentiesImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_(1)_1775804410947.jpeg";
 import bizxcelImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.56_PM_1775804410950.jpeg";
 import wosPackagingLogoImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.55_PM_(2)_1775804410952.jpeg";
@@ -116,7 +117,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <button data-testid="services-logo" onClick={() => setLocation("/")} className="flex items-center gap-3">
-              <img src="/mana-logo-mark.png" alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)" }} draggable={false} />
+              <img src={logoImg} alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)", mixBlendMode: "screen" }} draggable={false} />
               <span className="font-display font-bold text-[15px] tracking-wider text-white uppercase">MANA AI</span>
             </button>
             <div className="flex items-center gap-4">

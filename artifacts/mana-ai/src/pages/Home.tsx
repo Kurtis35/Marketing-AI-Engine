@@ -15,6 +15,7 @@ import {
   BarChart3, Layers, Bot, Target, Rocket, Gauge, Globe
 } from "lucide-react";
 import heroOwnerImg from "@assets/WhatsApp_Image_2026-04-09_at_2.16.48_PM_(3)_1776327443687.jpeg";
+import logoImg from "@assets/WhatsApp_Image_2026-04-16_at_10.50.01_PM_1776429915147.jpeg";
 
 const WHATSAPP_URL = "https://wa.me/27760355295";
 
@@ -92,7 +93,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex items-center justify-between h-[68px]">
             <div className="flex-shrink-0 cursor-pointer flex items-center gap-3" onClick={() => scrollTo("hero")}>
-              <img src="/mana-logo-mark.png" alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)" }} draggable={false} />
+              <img src={logoImg} alt="MANA AI" className="h-10 w-10 object-contain" style={{ filter: "invert(1)", mixBlendMode: "screen" }} draggable={false} />
               <span className="font-display font-bold text-[15px] tracking-wider text-white uppercase">MANA AI</span>
             </div>
             <div className="hidden md:flex items-center gap-1">
@@ -769,7 +770,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6 cursor-pointer" onClick={() => scrollTo("hero")}>
-                <img src="/mana-logo-mark.png" alt="MANA AI" className="h-10 w-10 object-contain opacity-80" style={{ filter: "invert(1)" }} draggable={false} />
+                <img src={logoImg} alt="MANA AI" className="h-10 w-10 object-contain opacity-70" style={{ filter: "invert(1)", mixBlendMode: "screen" }} draggable={false} />
                 <span className="font-display font-bold text-[15px] tracking-wider text-white/70 uppercase">MANA AI</span>
               </div>
               <p className="text-white/22 text-sm leading-relaxed max-w-xs mb-5 font-light">
