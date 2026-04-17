@@ -1,0 +1,159 @@
+You are an elite UI/UX designer, brand strategist, and conversion-focused web developer.
+
+Your task is to redesign and rewrite an existing website for a digital agency called "Mana AI" to outperform high-end agencies like DMN Creative in both design and conversion.
+
+⚠️ IMPORTANT GOAL:
+This website must feel premium, modern, and authoritative — like a top-tier international agency — while also being highly persuasive and optimized to convert visitors into leads.
+
+---
+
+🔍 CONTEXT:
+
+Current site: https://www.manaai.co.za/
+Inspiration site: https://dmncreative.com/
+
+The current Mana AI site feels like a basic service provider. We want to transform it into a high-end, AI-powered digital growth agency.
+
+---
+
+🎯 OBJECTIVE:
+
+Create a fully redesigned homepage that:
+
+* Looks visually stunning (clean, modern, premium)
+* Communicates strong value instantly
+* Focuses on RESULTS, not services
+* Builds trust quickly
+* Converts visitors into leads
+
+---
+
+🧠 BRAND POSITIONING:
+
+Mana AI is NOT just a web design or marketing service.
+
+It is:
+"An AI-powered digital growth agency that builds high-converting online systems for businesses."
+
+Core idea:
+👉 We don’t build websites — we build revenue-generating machines.
+
+---
+
+✍️ COPYWRITING STYLE:
+
+* Bold, confident, minimal
+* Clear and powerful (no fluff)
+* Focus on transformation and outcomes
+* Speak directly to business owners
+* Make the user feel: "I need this"
+
+---
+
+🏗️ STRUCTURE TO BUILD:
+
+1. HERO SECTION
+
+* Big headline focused on results
+  Example:
+  “We turn businesses into high-converting online machines.”
+* Subheadline explaining value clearly
+* Strong CTA button:
+  “Get Your Free Growth Plan”
+* Clean, premium layout
+
+---
+
+2. TRUST & AUTHORITY
+
+* Short section showing credibility
+* Include:
+
+  * “Trusted by growing businesses”
+  * Results-driven messaging
+  * Placeholder for testimonials
+
+---
+
+3. WHAT WE DO (SIMPLIFIED SERVICES)
+   Group into 3 powerful categories:
+
+* Brand & Website Systems
+* Marketing & Lead Generation
+* AI Automation & Optimization
+
+Each with short, benefit-driven descriptions
+
+---
+
+4. PROCESS SECTION
+   Make it feel structured and professional:
+
+Step 1: Strategy
+Step 2: Build
+Step 3: Launch
+Step 4: Scale
+
+Include short explanations for each
+
+---
+
+5. RESULTS / BENEFITS SECTION
+   Focus on outcomes:
+
+* More leads
+* More sales
+* Stronger brand presence
+* Automated systems
+
+---
+
+6. FINAL CTA SECTION
+   Strong closing statement:
+   “Stop losing clients online. Let’s build your growth system.”
+
+CTA button:
+“Get Started”
+
+---
+
+🎨 DESIGN REQUIREMENTS:
+
+* Minimalist, high-end aesthetic
+* Use lots of whitespace
+* Large, bold typography
+* Smooth scroll and subtle animations
+* Modern color palette (dark + accent color preferred)
+* Mobile responsive
+* Fast loading
+
+---
+
+⚙️ TECHNICAL:
+
+* Use clean, semantic HTML, modern CSS, and optional JavaScript
+* Optimize for performance and SEO
+* Structure content clearly for easy editing later
+
+---
+
+🚀 EXTRA (IMPORTANT):
+
+* Make the site feel like a real agency, not a freelancer
+* Avoid clutter
+* Avoid generic stock phrases
+* Everything should feel intentional and premium
+
+---
+
+🎯 FINAL RESULT:
+
+A homepage that:
+
+* Looks better than DMN Creative
+* Feels like a high-ticket agency (R10k+ clients)
+* Converts visitors into leads effectively
+
+---
+
+Now redesign the homepage accordingly and provide the full code and structure.
